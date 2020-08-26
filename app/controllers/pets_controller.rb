@@ -36,7 +36,7 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do 
-   # binding.pry
+   
     if !params[:pet].keys.include?("owner_id")
       params[:pet]["owner_id"] = []
     end
@@ -49,7 +49,7 @@ class PetsController < ApplicationController
     end
 
     @pet.save
-    
+
     redirect to "/pets/#{@pet.id}"
   end
 end
