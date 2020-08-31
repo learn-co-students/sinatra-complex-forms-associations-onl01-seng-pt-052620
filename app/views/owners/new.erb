@@ -1,7 +1,7 @@
 <h1>Create a new Owner</h1>
 
 <form action="/owners" method="POST">
-  <label>Name:</label>
+  <label>Owner Name:</label>
 
   <br>
 
@@ -12,6 +12,12 @@
     <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>"><%= pet.name %><br>
   <% end %>
   <br>
+
+  <h3>New Pet</h3>
+  <label>Pet Name: </label>
+  <br>
+  <input type="text" name="pet[name]" id="pet_name">
+  <br><br>
 
   <input type="submit" value="Create Owner">
 </form>
